@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Flatmates Bill Sharing</h1>
+    </header>
+    <main>
+        <p>Welcome to the flatmates bill-sharing application. Use the link below to start calculating bill shares.</p>
+        <a class="button" href="{{ url_for('Bill_form_page') }}">Go to the Bill Form</a>
+    </main>
+    <footer>
+        <p>&copy; 2024 Flatmates Bill Sharing. All rights reserved.</p>
+    </footer>
+</body>
+</html>
