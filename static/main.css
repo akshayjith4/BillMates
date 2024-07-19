@@ -1,0 +1,93 @@
+/* General Body Styling */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: #f5f5f5; /* Light Gray Text Color */
+    background-color: #212121; /* Dark Background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #333; /* Darker Gray */
+    padding: 20px;
+    text-align: center; /* Center-align header content */
+}
+
+header h1 {
+    color: #4caf50; /* Green */
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Main Content Styling */
+main {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #424242; /* Dark Gray Background for Main Content */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: left; /* Align text to the left */
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form elements */
+}
+
+form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #4caf50; /* Green Border */
+    border-radius: 5px;
+    background-color: #333; /* Darker Gray Background */
+    color: #f5f5f5; /* Light Gray Text */
+}
+
+form input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50; /* Green */
+    color: #ffffff; /* White Text */
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049; /* Slightly Darker Green */
+}
+
+/* Button Styling in Footer and elsewhere */
+button, a.button {
+    color: #ffffff; /* White Text */
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: #66bb6a; /* Lighter Green */
+    border: 1px solid #66bb6a; /* Lighter Green Border */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover, a.button:hover {
+    background-color: #4caf50; /* Darker Green on Hover */
+    color: #ffffff; /* White Text */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333; /* Darker Gray */
+    color: #e0e0e0; /* Light Gray Text */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
