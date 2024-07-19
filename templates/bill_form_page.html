@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Bill Form</h1>
+    </header>
+    <main>
+        <form action="{{ url_for('results_page') }}" method="post">
+            <fieldset>
+                <legend>Enter Bill Details</legend>
+                <label for="amount">{{ billform.amount.label.text }}</label>
+                {{ billform.amount(size=20) }}
+                <br>
+                <label for="period">{{ billform.period.label.text }}</label>
+                {{ billform.period(size=20) }}
+                <br>
+                <label for="num_flatmates">{{ billform.num_flatmates.label.text }}</label>
+                {{ billform.num_flatmates(size=5) }}
+            </fieldset>
+            <fieldset id="flatmate-details">
+                <legend>Flatmates</legend>
+                <!-- Placeholder for dynamic flatmate input fields -->
+            </fieldset>
+            <div class="form-group">
+                {{ billform.button() }}
+            </div>
+        </form>
+    </main>
+    <footer>
+        <a class="button" href="{{ url_for('Homepage') }}">Back to Home</a>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const numFlatmatesField = document.querySelector('input[name="num_flatmates"]');
+            const flatmateDetails = document.getElementById('flatmate-details');
+
+            numFlatmatesField.addEventListener('change', function() {
+                const num = parseInt(numFlatmatesField.value);
+                flatmateDetails.innerHTML = '';
+
+                for (let i = 0; i < num; i++) {
+                    flatmateDetails.innerHTML += `
+                        <fieldset>
+                            <legend>Flatmate ${i + 1}</legend>
+                            <label for="name${i + 1}">Name:</label>
+                            <input type="text" name="name${i + 1}" required>
+                            <br>
+                            <label for="days_in_the_house${i + 1}">Days in the House:</label>
+                            <input type="number" name="days_in_the_house${i + 1}" required>
+                        </fieldset>
+                    `;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
