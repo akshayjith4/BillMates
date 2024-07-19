@@ -19,6 +19,7 @@ pip (Python package installer)
 
 
 Steps
+
 1.Clone the Repository :
 git clone https://github.com/akshayjith4/billmates.git
 cd billmates
@@ -50,9 +51,14 @@ Online Access :
 BillMates is also available online at BillMates(http://Akshayjith.pythonanywhere.com). The site will be available for only 3 months because, let's face it, domains are expensive and this is a passion project.
 
 Contributing
+
 We welcome contributions! Please follow these steps to contribute:
+
 1.Fork the repository.
+
 2.Create a new branch (git checkout -b feature-branch).
+
 3.Make your changes and commit them (git commit -m 'Add new feature').
+
 4.Push to the branch (git push origin feature-branch).
 5.Open a pull request.
